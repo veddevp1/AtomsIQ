@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1220">
+<title>AtomsIQ— Forecast, beautifully clear</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="shell">
+  <header class="top">
+    <div class="brand"><div class="logo">☼</div><div><div class="brand-name">AtomsIQ</div><div class="brand-sub">WEATHER, CLEARLY.</div></div></div>
+    <div class="top-right">
+      <span class="pill">LIVE CONDITIONS</span>
+      <form class="search" id="searchForm"><input id="cityInput" type="search" placeholder="Search city…" aria-label="Search city"><button type="submit">Search</button></form>
+      <button class="icon-btn" id="locBtn" title="Use my location" aria-label="Use my location">◎</button>
+    </div>
+  </header>
+  <div class="status" id="status">Getting local weather…</div>
+  <main id="app">
+    <section class="hero">
+      <article class="card current">
+        <div class="eyebrow">CURRENT WEATHER</div><div class="place" id="place">—</div><div class="date" id="date">—</div>
+        <div class="temp-row"><div class="weather-icon" id="mainIcon">☀️</div><div><div class="temp"><span id="temperature">—</span><sup>°C</sup></div><div class="condition" id="condition">Loading conditions</div><div class="feels">Feels like <strong id="feels">—</strong>° · H: <strong id="high">—</strong>° L: <strong id="low">—</strong>°</div></div></div>
+      </article>
+      <article class="card summary"><div><h3>Today at a glance</h3><p id="description">A clear view of the weather around you, with the details that matter throughout your day.</p></div><div class="sunline"><div>☀ Sunrise<strong id="sunrise">—</strong></div><div>☾ Sunset<strong id="sunset">—</strong></div></div></article>
+    </section>
+    <div class="section-head"><h2>Weather details</h2><span>RIGHT NOW</span></div>
+    <section class="metrics">
+      <article class="card metric"><div class="metric-label">💧 Humidity</div><div class="metric-value" id="humidity">—</div><div class="metric-note">Relative humidity</div></article>
+      <article class="card metric"><div class="metric-label">➤ Wind speed</div><div class="metric-value" id="wind">—</div><div class="metric-note" id="windDir">At your location</div></article>
+      <article class="card metric"><div class="metric-label">◉ UV index</div><div class="metric-value" id="uv">—</div><div class="metric-note" id="uvNote">Current UV level</div></article>
+      <article class="card metric"><div class="metric-label">☁ Cloud cover</div><div class="metric-value" id="cloud">—</div><div class="metric-note">Sky coverage</div></article>
+    </section>
+    <div class="section-head"><h2>Hourly forecast</h2><span>NEXT 24 HOURS</span></div>
+    <section class="hourly" id="hourly"></section>
+    <div class="section-head"><h2>7-day forecast</h2><span>UPCOMING DAYS</span></div>
+    <section class="card daily" id="daily"></section>
+  </main>
+  <footer class="footer">© 2026 VED. ALL RIGHTS RESERVED. &nbsp;·&nbsp; WEATHER DATA BY OPEN-METEO</footer>
+</div>
+<script src="script.js" defer></script>
+</body></html>
